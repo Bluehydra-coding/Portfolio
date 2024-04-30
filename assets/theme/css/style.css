@@ -957,7 +957,15 @@ blockquote {
     display: block;
 }
 
-.custom-marker::before {
-    content: "✖"; /* Use the Unicode character for a cross */
-    margin-right: 5px; /* Optional: Add some spacing between the cross and the text */
+.custom-marker {
+    list-style-type: none; /* Remove default list item marker */
 }
+
+.cross-mark {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: red; /* Adjust color as needed */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 50%, 50% 100%, 0% 100%);
+}
+
